@@ -1,0 +1,44 @@
+[
+    {
+        "case_id": 1,
+        "prediction": "Injured",
+        "image_path": "uploads\\WhatsApp_Image_2025-05-10_at_10.15.13_f8e90663.jpg",
+        "user_input": "Bleeding, Wounded, Malnourished"
+    },
+    {
+        "case_id": 2,
+        "prediction": "Injured",
+        "image_path": "uploads\\Injured_deer.JPG",
+        "user_input": "Wounded, Bleeding, Malnourished"
+    },
+    {
+        "case_id": 3,
+        "prediction": "Injured",
+        "image_path": "uploads\\Blog-What-to-do-when-you-find-an-injured-stray-animal_Web.webp",
+        "user_input": ""
+    },
+    {
+        "case_id": 4,
+        "prediction": "Not Injured",
+        "image_path": "uploads\\download.jpeg",
+        "user_input": ""
+    },
+    {
+        "case_id": 5,
+        "prediction": "Not Injured",
+        "image_path": "uploads\\Screenshot_2025-05-13_230342.png",
+        "user_input": ""
+    },
+    {
+        "case_id": 6,
+        "prediction": "Injured",
+        "image_path": "uploads\\Screenshot_2025-05-13_230358.png",
+        "user_input": "Wounded, Skin condition"
+    },
+    {
+        "case_id": 7,
+        "prediction": "Injured",
+        "image_path": "uploads\\WhatsApp_Image_2025-05-10_at_10.15.13_f8e90663.jpg",
+        "user_input": "Wounded, Bleeding"
+    }
+]

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stray Help Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center text-red-700">🐾 Stray Help Case Dashboard</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for case in cases %}
+        <div class="bg-white rounded-xl shadow-md p-4">
+            <h2 class="text-lg font-semibold text-red-600">🆔 Case #{{ case.case_id }}</h2>
+            <img src="{{ url_for('uploaded_file', filename=case.image_path.split('/')[-1].split('\\')[-1]) }}"
+                alt="Animal Image" class="w-full h-48 object-cover rounded-md my-2 border">
+
+            <p><strong>📸 Image Path:</strong> {{ case.image_path }}</p>
+            <p><strong>🔍 Prediction:</strong> {{ case.prediction }}</p>
+            <p><strong>📍 Location:</strong> Ramdeobaba University, Nagpur</p>
+            {% set status_color = {
+            'Not Answered': 'bg-yellow-200 text-yellow-800',
+            'In Progress': 'bg-blue-200 text-blue-800',
+            'Completed': 'bg-green-200 text-green-800'
+            } %}
+            <p>
+                <strong>📌 Status:</strong>Not Answered
+                <!-- <span
+                    class="px-2 py-1 rounded-full text-sm font-semibold {{ status_color.get(case.status, 'bg-gray-200 text-gray-800') }}">
+                    {{ case.status }}
+                </span> -->
+            </p>
+            <p class="mt-2 text-sm text-gray-500">This case needs manual review for action.</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
